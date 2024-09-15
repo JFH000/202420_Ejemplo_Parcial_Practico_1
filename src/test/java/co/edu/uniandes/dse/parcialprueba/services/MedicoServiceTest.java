@@ -60,7 +60,7 @@ class MedicoServiceTest {
 	}
 
     @Test
-    void createMedicoCorrecto() throws IllegalOperationException{
+    void createMedicoCorrectoTest() throws IllegalOperationException{
         MedicoEntity newEntity = factory.manufacturePojo(MedicoEntity.class);
 
         newEntity.setRegistroMedico("RM29304");
@@ -78,7 +78,7 @@ class MedicoServiceTest {
     }
 
 	@Test
-	void createMEdicoIncorrecto(){
+	void createMEdicoIncorrectoTest(){
 		assertThrows(IllegalOperationException.class, ()->{
 			MedicoEntity newEntity = factory.manufacturePojo(MedicoEntity.class);
 			medicoService.createMedico(newEntity);
